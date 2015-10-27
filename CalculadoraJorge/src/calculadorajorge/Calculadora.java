@@ -4,11 +4,14 @@
  */
 package calculadorajorge;
 
+import javax.swing.*;
+import java.awt.event.*;
+
 /**
  *
  * @author emanuelm
  */
-public class Calculadora extends javax.swing.JFrame {
+public class Calculadora extends JFrame {
     
     boolean entrandoNum1;
     int numero1, numero2, resultado;
@@ -21,10 +24,7 @@ public class Calculadora extends javax.swing.JFrame {
     public Calculadora() {
         initComponents();
         entrandoNum1 = true;
-        numero1 = 0;
-        numero2 = 0;
         operacion = "";
-        resultDificil = 0;
     }
 
     /**
@@ -36,43 +36,43 @@ public class Calculadora extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuItem1 = new javax.swing.JMenuItem();
-        num1 = new javax.swing.JButton();
-        num2 = new javax.swing.JButton();
-        num33 = new javax.swing.JButton();
-        operMas = new javax.swing.JButton();
-        num5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        num4 = new javax.swing.JButton();
-        operMenos = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        operIgual = new javax.swing.JButton();
-        resultadoMostrar = new javax.swing.JLabel();
-        operRaiz = new javax.swing.JButton();
+        jMenuItem1 = new JMenuItem();
+        num1 = new JButton();
+        num2 = new JButton();
+        num33 = new JButton();
+        operMas = new JButton();
+        num5 = new JButton();
+        jButton6 = new JButton();
+        num4 = new JButton();
+        operMenos = new JButton();
+        jButton9 = new JButton();
+        jButton10 = new JButton();
+        jButton11 = new JButton();
+        jButton12 = new JButton();
+        jButton15 = new JButton();
+        operIgual = new JButton();
+        resultadoMostrar = new JLabel();
+        operRaiz = new JButton();
 
         jMenuItem1.setText("jMenuItem1");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         num1.setText("1");
-        num1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        num1.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent evt) {
                 num1MouseClicked(evt);
             }
         });
-        num1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        num1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 num1ActionPerformed(evt);
             }
         });
 
         num2.setText("2");
-        num2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        num2.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent evt) {
                 num2MouseClicked(evt);
             }
         });
@@ -80,8 +80,8 @@ public class Calculadora extends javax.swing.JFrame {
         num33.setText("3");
 
         operMas.setText("+");
-        operMas.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        operMas.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent evt) {
                 operMasMouseClicked(evt);
             }
         });
@@ -93,8 +93,8 @@ public class Calculadora extends javax.swing.JFrame {
         num4.setText("4");
 
         operMenos.setText("-");
-        operMenos.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        operMenos.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent evt) {
                 operMenosMouseClicked(evt);
             }
         });
@@ -110,42 +110,42 @@ public class Calculadora extends javax.swing.JFrame {
         jButton15.setText("0");
 
         operIgual.setText("=");
-        operIgual.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        operIgual.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent evt) {
                 operIgualMouseClicked(evt);
             }
         });
-        operIgual.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        operIgual.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 operIgualActionPerformed(evt);
             }
         });
 
         operRaiz.setText("=");
-        operRaiz.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        operRaiz.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent evt) {
                 operRaizMouseClicked(evt);
             }
         });
-        operRaiz.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        operRaiz.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 operRaizActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(57, 57, 57)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(resultadoMostrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                    .addComponent(resultadoMostrar, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton11)
                         .addGap(18, 18, 18)
                         .addComponent(jButton9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton10)
                         .addGap(18, 18, 18)
                         .addComponent(jButton12))
@@ -153,7 +153,7 @@ public class Calculadora extends javax.swing.JFrame {
                         .addComponent(num4)
                         .addGap(18, 18, 18)
                         .addComponent(num5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton6)
                         .addGap(18, 18, 18)
                         .addComponent(operMenos))
@@ -161,46 +161,46 @@ public class Calculadora extends javax.swing.JFrame {
                         .addComponent(num1)
                         .addGap(18, 18, 18)
                         .addComponent(num2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(num33)
                         .addGap(18, 18, 18)
                         .addComponent(operMas))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton15)
                         .addGap(124, 124, 124)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                             .addComponent(operRaiz)
                             .addComponent(operIgual))))
                 .addContainerGap(144, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(76, 76, 76)
-                .addComponent(resultadoMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(resultadoMostrar, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                     .addComponent(num1)
                     .addComponent(num2)
                     .addComponent(num33)
                     .addComponent(operMas))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                     .addComponent(num4)
                     .addComponent(num5)
                     .addComponent(jButton6)
                     .addComponent(operMenos))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton11)
                     .addComponent(jButton9)
                     .addComponent(jButton10)
                     .addComponent(jButton12))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton15)
                     .addComponent(operIgual))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(operRaiz)
                 .addContainerGap(18, Short.MAX_VALUE))
         );
@@ -208,7 +208,7 @@ public class Calculadora extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void num1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_num1MouseClicked
+    private void num1MouseClicked(MouseEvent evt) {//GEN-FIRST:event_num1MouseClicked
         // TODO add your handling code here:
         resultadoMostrar.setText(resultadoMostrar.getText() + num1.getText());
         if (entrandoNum1) {
@@ -228,15 +228,15 @@ public class Calculadora extends javax.swing.JFrame {
         System.out.println(numero1);
     }//GEN-LAST:event_num1MouseClicked
     
-    private void operIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_operIgualActionPerformed
+    private void operIgualActionPerformed(ActionEvent evt) {//GEN-FIRST:event_operIgualActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_operIgualActionPerformed
     
-    private void num1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num1ActionPerformed
+    private void num1ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_num1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_num1ActionPerformed
     
-    private void num2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_num2MouseClicked
+    private void num2MouseClicked(MouseEvent evt) {//GEN-FIRST:event_num2MouseClicked
         // TODO add your handling code here:
         resultadoMostrar.setText(resultadoMostrar.getText() + num2.getText());
         if (entrandoNum1) {
@@ -254,7 +254,7 @@ public class Calculadora extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_num2MouseClicked
     
-    private void operIgualMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_operIgualMouseClicked
+    private void operIgualMouseClicked(MouseEvent evt) {//GEN-FIRST:event_operIgualMouseClicked
         // TODO add your handling code here:
         resultadoMostrar.setText(resultadoMostrar.getText() + operIgual.getText());
         if (operacion.equals("suma")) {
@@ -266,41 +266,41 @@ public class Calculadora extends javax.swing.JFrame {
         
     }//GEN-LAST:event_operIgualMouseClicked
     
-    private void operMasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_operMasMouseClicked
+    private void operMasMouseClicked(MouseEvent evt) {//GEN-FIRST:event_operMasMouseClicked
         // TODO add your handling code here:
         entrandoNum1 = false;
         resultadoMostrar.setText(resultadoMostrar.getText() + operMas.getText());
         operacion = "suma";
     }//GEN-LAST:event_operMasMouseClicked
     
-    private void operMenosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_operMenosMouseClicked
+    private void operMenosMouseClicked(MouseEvent evt) {//GEN-FIRST:event_operMenosMouseClicked
         // TODO add your handling code here:
         entrandoNum1 = false;
         resultadoMostrar.setText(resultadoMostrar.getText() + operMenos.getText());
         operacion = "resta";
     }//GEN-LAST:event_operMenosMouseClicked
 
-    private void operRaizMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_operRaizMouseClicked
+    private void operRaizMouseClicked(MouseEvent evt) {//GEN-FIRST:event_operRaizMouseClicked
         // TODO add your handling code here:
         resultDificil = Math.sqrt(numero1);
         System.out.println(resultDificil);
     }//GEN-LAST:event_operRaizMouseClicked
 
-    private void operRaizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_operRaizActionPerformed
+    private void operRaizActionPerformed(ActionEvent evt) {//GEN-FIRST:event_operRaizActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_operRaizActionPerformed
     
-    private void num3MouseClicked(java.awt.event.MouseEvent evt) {
+    private void num3MouseClicked(MouseEvent evt) {
         // TODO add your handling code here:
         resultadoMostrar.setText(resultadoMostrar.getText() + num33);
     }
     
-    private void num4MouseClicked(java.awt.event.MouseEvent evt) {
+    private void num4MouseClicked(MouseEvent evt) {
         // TODO add your handling code here:
         resultadoMostrar.setText(num4.getText());
     }
     
-    private void num5MouseClicked(java.awt.event.MouseEvent evt) {
+    private void num5MouseClicked(MouseEvent evt) {
         // TODO add your handling code here:
         resultadoMostrar.setText(num5.getText());
     }
@@ -315,9 +315,9 @@ public class Calculadora extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
@@ -327,7 +327,7 @@ public class Calculadora extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
@@ -340,22 +340,22 @@ public class Calculadora extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JButton num1;
-    private javax.swing.JButton num2;
-    private javax.swing.JButton num33;
-    private javax.swing.JButton num4;
-    private javax.swing.JButton num5;
-    private javax.swing.JButton operIgual;
-    private javax.swing.JButton operMas;
-    private javax.swing.JButton operMenos;
-    private javax.swing.JButton operRaiz;
-    private javax.swing.JLabel resultadoMostrar;
+    private JButton jButton10;
+    private JButton jButton11;
+    private JButton jButton12;
+    private JButton jButton15;
+    private JButton jButton6;
+    private JButton jButton9;
+    private JMenuItem jMenuItem1;
+    private JButton num1;
+    private JButton num2;
+    private JButton num33;
+    private JButton num4;
+    private JButton num5;
+    private JButton operIgual;
+    private JButton operMas;
+    private JButton operMenos;
+    private JButton operRaiz;
+    private JLabel resultadoMostrar;
     // End of variables declaration//GEN-END:variables
 }
